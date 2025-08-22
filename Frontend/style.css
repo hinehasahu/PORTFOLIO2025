@@ -35,8 +35,10 @@ section{
     padding: 0 80px;
     margin: auto;
 }
+
 .about, .services, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
+    color: #e0f7fa;
 }
 .about .about-content,
 .services .serv-content,
@@ -63,7 +65,7 @@ section .title::before{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: #fff;
     transform: translateX(-50%);
 }
 section .title::after{
@@ -71,9 +73,9 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: rgb(34, 62, 104);
+    color: #01579b;
     padding: 0 5px;
-    background: #fff;
+    background: #e0f7fa;
     transform: translateX(-50%);
 }
 
@@ -88,7 +90,8 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(34, 62, 104);
+    background: #e0f7fa;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .navbar .max-width{
     display: flex;
@@ -96,7 +99,7 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #001f3f;
     font-size: 35px;
     font-weight: 600;
 }
@@ -113,14 +116,14 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: #001f3f;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: rgb(34, 62, 104);
+    color: #fff;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -128,21 +131,21 @@ section .title::after{
 
 /* menu btn styling */
 .menu-btn{
-    color: #fff;
+    color: #001f3f;
     font-size: 23px;
     cursor: pointer;
     display: none;
 }
 .scroll-up-btn{
     position: fixed;
-    height: 45px;
-    width: 42px;
-    background: rgb(34, 62, 104);
+    height: 2.4rem;
+    width: 2rem;
+    background: #e0f7fa;
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color: #01579b;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -165,9 +168,9 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/banner1.jfif") no-repeat center;
+    /* background: url("images/banner1.jfif") no-repeat center; */
     height: 100vh;
-    color: #fff;
+    color: #01579b;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
@@ -183,16 +186,23 @@ section .title::after{
 .home .max-width .row{
   margin-right: 0;
 }
+
 .home .home-content .text-1{
     font-size: 27px;
+    
 }
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    font-family: cursive;
 }
-.home .home-content .text-3{
+.home .home-content {
     font-size: 40px;
+    margin: 5px 0;
+}
+.text-3{
+    font-size: 24px;
     margin: 5px 0;
 }
 /* .home .home-content .text-3 span{
@@ -217,8 +227,16 @@ section .title::after{
 }
 
 /* about section styling */
+#about .title {
+    color: #001f3f;
+}
+
 .about .title::after{
-    content: "who i am";
+    content: "who I am";
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
 }
 .about .about-content .left{
     width: 45%;
@@ -227,10 +245,13 @@ section .title::after{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 100%;
+    border: 1rem solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .about .about-content .right{
     width: 55%;
+    color: #fff;
 }
 .about .about-content .right .text{
     font-size: 25px;
@@ -245,14 +266,14 @@ section .title::after{
 }
 .about .about-content .right a{
     display: inline-block;
-    background: rgb(34, 62, 104);
-    color: #fff;
+    background: #e0f7fa;
+    color: #0288d1;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid rgb(34, 62, 104);
+    /* border: 2px solid #001f3f; */
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
@@ -263,7 +284,7 @@ section .title::after{
 /* services section styling */
 .services, .teams{
     color:#fff;
-    background: #111;
+    /* background: #111; */
 }
 .services .title::before,
 .teams .title::before{
@@ -271,18 +292,20 @@ section .title::after{
 }
 .services .title::after,
 .teams .title::after{
-    background: #111;
-    content: "what i build";
+    content: "what I built";
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
 }
 .services .serv-content .card{
     width: calc(50% - 20px);
-    height: 350px;
-    background: #222;
     text-align: center;
-    border-radius: 6px;
     padding: 40px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 20px;
+    border: 1px solid #f2f2f2;
 }
 .services .serv-content .card:hover{
     background: rgb(34, 62, 104);
@@ -295,7 +318,7 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: rgb(34, 62, 104);
+    /* color: rgb(34, 62, 104); */
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
@@ -309,9 +332,15 @@ section .title::after{
 
 /* skills section styling */
 
-
+.skills{
+    color: #fff;
+}
 .skills .title::after{
-    content: "what i know";
+    content: "what I know";
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -386,6 +415,10 @@ section .title::after{
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
 }
 .teams .carousel .card{
     background: #222;
@@ -450,11 +483,13 @@ section .title::after{
 
 /* contact section styling */
 
-.contact{
-    background-color: rgb(223, 208, 208);
-}
+
 .contact .title::after{
-    content: "get in touch";
+    content: "Get in touch";
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -480,13 +515,13 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: rgb(34, 62, 104);
+    color: #fff;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: #fff;
 }
 .contact .right form .fields{
     display: flex;
@@ -529,33 +564,37 @@ section .title::after{
   align-items: center;
 }
 .right form .button-area button{
-  color: #fff;
+  color: #01579b;
   display: block;
   width: 160px!important;
   height: 45px;
   outline: none;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: rgb(34, 62, 104);
+  background: #e0f7fa;
   border: 2px solid rgb(34, 62, 104);
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: rgb(34, 62, 104);
+  color: #fff;
   background: none;
+}
+input textarea{
+    background-color: #e0f7fa;
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: #001f3f;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    border-top: 1px solid #e0f7fa;
 }
 footer span a{
-    color: rgb(34, 62, 104);
+    color: #e0f7fa;
     text-decoration: none;
 }
 footer span a:hover{
@@ -590,7 +629,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: #e0f7fa;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -609,7 +648,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 70px;
     }
-    .home .home-content .text-3{
+    .home .home-content {
         font-size: 40px;
     }
     .home .home-content a{
@@ -648,7 +687,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 60px;
     }
-    .home .home-content .text-3{
+    .home .home-content {
         font-size: 32px;
     }
     .home .home-content a{
@@ -663,7 +702,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 50px;
     }
-    .home .home-content .text-3{
+    .home .home-content {
         font-size: 27px;
     }
     .about .about-content .right .text,
