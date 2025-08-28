@@ -104,7 +104,7 @@ code {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-justify-content: space-evenly;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .Skills_aligner > div {
   margin: 25px 25px;
